@@ -14,6 +14,11 @@ npm install
 npm start
 ```
 
+### Optionaly use port as argument
+```bash
+npm start <port>
+```
+
 ## Build Exe
 ```bash
 npm run build

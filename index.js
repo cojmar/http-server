@@ -5,7 +5,7 @@ const path = require('path')
 
 const { networkInterfaces } = require('os')
 
-const port = 3000
+let port = 3000
 const server = http.createServer((req, res) => {
     let filePath = path.join(process.cwd(), req.url)
 
@@ -45,8 +45,15 @@ const get_ips = async f => {
     const interfaces = networkInterfaces()
     const interfaces_names = Object.keys(interfaces)
     Object.values(interfaces).reduce((r, ni) => [...r, ...ni], []).filter(i => i.family === 'IPv4').map((i, j) => ips.push([interfaces_names[j], i.address]))
+    console.log("Server running on:\n")
     start_server()
 }
+
+const args = process.argv.slice(2);
+port = args.shift() || port
+
+process.removeAllListeners('warning')
 get_ips()
+
 
 
