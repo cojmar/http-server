@@ -25,5 +25,5 @@ npm run build
 ```
 ## Download Compiled Release
 You can download the latest version of `http-server.exe` directly from [the latest release](https://github.com/cojmar/http-server/releases/latest) or from this direct link to the asset:  
-[http-server.exe](https://github.com/cojmar/http-server/releases/download/1.0/http-server.exe)
+[http-server.exe](https://github.com/cojmar/http-server/releases/download/1.1/http-server.exe)
 
